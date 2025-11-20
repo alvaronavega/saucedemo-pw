@@ -10,8 +10,8 @@ test('fluxo completo de compra no saucedemo', async ({ page }) => {
     await login.goto();
 
     // Credenciais vindas de .env carregadas por playwright.config.js
-    const user = process.env.SAUCE_USERNAME || 'standard_user';
-    const pass = process.env.SAUCE_PASSWORD || 'secret_sauce';
+    const user = process.env.SAUCE_USERNAME;
+    const pass = process.env.SAUCE_PASSWORD;
     await login.login(user, pass);
 
     const products = new ProductsPage(page);
