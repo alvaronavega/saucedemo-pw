@@ -41,7 +41,6 @@ test('fluxo completo de compra no saucedemo', async ({ page }) => {
     const cart = new CartPage(page);
     await cart.goto();
     const count = await cart.getCartItemsCount();
-    console.log(`Itens no carrinho: ${count}`);
     expect(count).toBeGreaterThan(0);
     await cart.proceedToCheckout();
 
